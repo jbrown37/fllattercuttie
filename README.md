@@ -1,47 +1,104 @@
-# Flatacuties 🐾
+# 🐾 Flatacuties
 
-Flatacuties is a fun and interactive web app where users can vote for the cutest animals. Built with HTML, CSS, and JavaScript, this project uses a local JSON server to manage and update vote counts dynamically.
+Flatacuties is a fun and interactive web application that displays adorable animals. Users can browse, view details, and "like" their favorite animals. The app uses **JSON Server** to simulate a backend.
 
-## Features ✨
-- View a list of adorable animals 🐶🐱🐰🐼🐵
-- Click on an animal to see its details
-- Vote for your favorite animal
-- Reset votes with a single click
+## 📌 Features
 
-## Setup 🛠️
+✅ View a list of cute animals  
+✅ See detailed information about each animal  
+✅ Like animals and increase their like count  
+✅ Data persistence using JSON Server  
 
-### 1. Clone the Repository
-```sh
-git clone https://github.com/jbrown37/flatacuties.git
-cd flatacuties
-```
+---
 
-### 2. Install JSON Server (if not installed)
+## 🛠️ Installation & Setup
+
+### 1️⃣ Install JSON Server
+Ensure you have **Node.js** installed. Then, install JSON Server globally:
+
 ```sh
 npm install -g json-server
 ```
 
-### 3. Start the Backend Server
+### 2️⃣ Clone the Repository
+```sh
+git clone https://github.com/your-username/flatacuties.git
+cd flatacuties
+```
+
+### 3️⃣ Start JSON Server
+Run the following command to start the backend:
+
 ```sh
 json-server --watch db.json
 ```
-Verify the server is running by visiting: [http://localhost:3000/characters](http://localhost:3000/characters)
 
-### 4. Open the Project in Your Browser
-Simply open `index.html` in your preferred web browser.
+This will start a local server at `http://localhost:3000`.
 
-## Deployment 🚀
-This project can be hosted using GitHub Pages for the frontend. However, since it relies on a local JSON server, full functionality requires running the backend locally.
+### 4️⃣ Open the App
+Simply open `index.html` in your browser.
 
-## Technologies Used 💻
-- HTML
-- CSS
-- JavaScript
-- JSON Server
+---
 
-## Contributing 🤝
-Feel free to fork this repository and submit pull requests to improve the project!
+## 📂 Project Structure
 
-## License 📜
-This project is open-source under the MIT License.
+```
+flatacuties/
+│── index.html        # Main HTML file
+│── style.css         # CSS for styling
+│── script.js         # JavaScript functionality
+│── db.json           # JSON Server database
+└── README.md         # Project documentation
+```
+
+---
+
+## 🚀 API Endpoints
+
+- **Get all animals**: `GET /animals`
+- **Get a single animal**: `GET /animals/:id`
+- **Update likes**: `PATCH /animals/:id`
+
+### Example `db.json`:
+```json
+{
+  "animals": [
+    { "id": 1, "name": "Fluffy", "image": "fluffy.jpg", "likes": 5 },
+    { "id": 2, "name": "Whiskers", "image": "whiskers.jpg", "likes": 10 }
+  ]
+}
+```
+
+---
+
+## 🏆 How to Contribute
+
+1. **Fork** this repository  
+2. **Clone** your forked repo:  
+   ```sh
+   git clone https://github.com/your-username/flatacuties.git
+   ```
+3. **Create a new branch** for your changes:  
+   ```sh
+   git checkout -b feature-branch
+   ```
+4. **Make your changes and commit**:  
+   ```sh
+   git commit -m "Added a new feature"
+   ```
+5. **Push to your branch**:  
+   ```sh
+   git push origin feature-branch
+   ```
+6. **Submit a Pull Request** 🎉
+
+---
+
+## 🐝 License
+
+This project is open-source and free to use.
+
+---
+
+🚀 Enjoy using **Flatacuties**! Let us know if you have any issues. 🐶🐱🎉
 
