@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flatacuties</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Flatacuties</h1>
+    </header>
+    
+    <div id="character-bar"></div>
+
+    <div id="detailed-info">
+        <h2 id="character-name">Select a character</h2>
+        <img id="character-image" src="" alt="Character Image">
+        <p>Votes: <span id="vote-count">0</span></p>
+        <form id="votes-form">
+            <input type="number" id="vote-input" min="1" placeholder="Enter votes">
+            <button type="submit">Add Votes</button>
+        </form>
+        <button id="reset-votes">Reset Votes</button>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
